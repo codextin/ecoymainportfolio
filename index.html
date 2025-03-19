@@ -10,18 +10,18 @@
 </head>
 <body class="bg-dark h-[auto]" >
 
-    <nav class="navbar navbar-expand-lg bg-black/30 backdrop-blur-sm p-3 fixed-top border-b border-white/10">
+    <nav class="navbar navbar-expand-lg bg-black/30 backdrop-blur-sm p-3 fixed-top border-b border-white/40">
         <div class="container flex justify-between items-center">
             <a class="navbar-brand flex items-center space-x-2 px-4 py-2 
-            bg-white/5 backdrop-blur-sm
-            border border-white/10 rounded-full 
-            hover:bg-white/10
+            bg-blue-950/20 backdrop-blur-sm
+            border border-blue-500/10 rounded-full 
+            hover:bg-blue-900/20
             transform hover:scale-105
             transition-all duration-300
             sm:px-6 sm:py-3" 
             href="#">
                 <span class="text-base sm:text-lg md:text-xl font-medium tracking-wide
-                          text-white/90 hover:text-white">
+                          text-white/90 hover:text-blue-300">
                     Justin Ecoy
                 </span>
             </a>
@@ -50,48 +50,61 @@
     </nav>
 
     <section id="home" class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center bg-fixed pt-20 px-4" 
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1000&auto=format&fit=crop');">
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1000&auto=format&fit=crop');">
+    
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-sm"></div>
+    
     <div class="relative z-10 w-full max-w-4xl mx-auto">
-        <div class="animate-fadeIn">
-            <div class="mb-8 transform hover:scale-105 transition-transform duration-300">
+        <div class="animate-fadeIn space-y-12">
+            <!-- Profile Image -->
+            <div class="relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-75 blur group-hover:opacity-100 transition duration-500"></div>
                 <img src="landing page photo.jpg" alt="my photo" 
-                     class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto object-cover shadow-xl 
-                            border-4 border-red-500 hover:border-yellow-400 transition-colors duration-300">
+                     class="relative rounded-full w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto object-cover 
+                            border-2 border-white/20 group-hover:border-white/40 transition-all duration-300">
             </div>
             
-            <div class="space-y-4 sm:space-y-6">
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                    <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold 
-                               bg-gradient-to-r from-red-600 to-red-800 
-                               px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg 
-                               transform hover:scale-105 transition-all duration-300">
-                        Hi, I'm
+            <!-- Introduction -->
+            <div class="space-y-8">
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <span class="text-white/80 text-sm sm:text-base uppercase tracking-[0.2em] font-light">
+                        Web Developer & Designer
                     </span>
-                    <span class="text-yellow-400 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold 
-                               bg-black/80 backdrop-blur-sm 
-                               px-4 sm:px-6 py-2 sm:py-3 rounded-full border-2 border-red-500 
-                               transform hover:scale-105 transition-all duration-300">
-                        Justin Ecoy
-                    </span>
-                </div>
-
-                <div class="w-full max-w-2xl mx-auto px-2">
-                    <hr class="border-red-500 opacity-50 my-6 sm:my-8">
-                    
-                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white 
-                             bg-black/60 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-4 sm:py-6 
-                             border-2 border-red-500 shadow-2xl
-                             transform hover:scale-105 transition-all duration-300">
-                        Welcome to my Portfolio
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+                            Justin Ecoy
+                        </span>
                     </h1>
                 </div>
 
-                <div class="mt-8 sm:mt-10">
+         
+
+                <!-- Main Heading -->
+                <div class="max-w-2xl mx-auto px-4">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-white/90 leading-relaxed">
+                        Crafting Digital Experiences Through
+                        <span class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
+                            Creative Design
+                        </span>
+                    </h2>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8">
                     <a href="#about" 
-                       class="inline-block px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-semibold 
-                              text-white bg-gradient-to-r from-red-600 to-red-800 
-                              rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                       class="px-8 py-3 text-sm font-medium tracking-wide text-white/90 
+                              bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg
+                              hover:bg-white/15 hover:border-blue-500/20 
+                              transition-all duration-300">
                         Explore My Work
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-3 text-sm font-medium tracking-wide
+                              text-white/90 bg-gradient-to-r from-blue-600/80 to-blue-400/80 rounded-lg
+                              hover:from-blue-600 hover:to-blue-400
+                              transition-all duration-300">
+                        Contact Me!
                     </a>
                 </div>
             </div>
@@ -99,112 +112,107 @@
     </div>
 </section>
 
-<section id="about" class="relative min-h-screen py-16 lg:py-24 flex items-center justify-center bg-gradient-to-b from-black to-gray-900">
+<section id="about" class="relative min-h-screen py-20 lg:py-28 flex items-center justify-center bg-gradient-to-b from-black via-gray-900/90 to-black">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTcuNSAwTDM1IDM1TDE3LjUgNzBMMCA1MCI+PC9wYXRoPgo8L3N2Zz4=')]"></div>
+
     <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <!-- Profile Image Section -->
             <div class="w-full lg:w-2/5 flex justify-center">
                 <div class="relative group">
-                    <img src="my_photo_hahaha.jpg" alt="my pic" 
-                         class="rounded-2xl w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover shadow-2xl 
-                                border-4 border-red-500 transition-all duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent 
-                                rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <!-- Glow effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600/40 to-blue-400/40 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                    
+                    <div class="relative">
+                        <img src="landing page photo.jpg" alt="my pic" 
+                             class="rounded-2xl w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover 
+                                    border border-white/10 group-hover:border-white/20
+                                    shadow-[0_0_30px_rgba(0,0,0,0.4)]
+                                    transition-all duration-300">
+                    </div>
                 </div>
             </div>
 
+            <!-- Content Section -->
             <div class="w-full lg:w-3/5">
-                <h2 class="text-4xl lg:text-5xl text-white font-bold mb-6 
-                           bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400">
-                    About Me
-                </h2>
-
-                <div class="bg-gray-800/80 backdrop-blur-sm p-6 lg:p-8 rounded-xl shadow-2xl 
-                            border border-gray-700 hover:border-red-500 transition-all duration-300">
-                    <h3 class="text-red-500 text-2xl lg:text-3xl font-bold mb-4">
-                        Web Developer & Designer
-                    </h3>
-                    
-                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-                        Hello! I'm Justin Ecoy, a passionate web developer with a keen eye for design and a love for creating seamless user experiences. I specialize in front-end development and enjoy bringing creative ideas to life.
-                    </p>
-
-                    <div class="mb-6">
-                        <h4 class="inline-block text-white text-xl font-bold mb-4 px-6 py-2 
-                                 bg-gradient-to-r from-red-600 to-red-800 rounded-full">
-                            SKILLS
-                        </h4>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
-                                HTML
+                <div class="space-y-8">
+                    <!-- Section Title -->
+                    <div class="space-y-2">
+                        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight">
+                            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-300">
+                                About Me
                             </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
-                                CSS
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
-                                FIGMA
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
-                                BOOTSTRAP CSS
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200">
-                                TAILWIND CSS
-                            </span>
-                        </div>
+                        </h2>
+                        <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
                     </div>
 
-                    <div class="mb-6">
-                        <h4 class="inline-block text-xl font-bold mb-4 px-6 py-2 
-                                 bg-white text-red-600 rounded-full">
-                            HOBBIES
-                        </h4>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200 
-                                       border border-red-500">
-                                Basketball
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200 
-                                       border border-red-500">
-                                Cooking
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200 
-                                       border border-red-500">
-                                Billiard
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200 
-                                       border border-red-500">
-                                Watching movies
-                            </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full 
-                                       text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-200 
-                                       border border-red-500">
-                                Study
-                            </span>
-                        </div>
-                    </div>
+                    <!-- Main Content Card -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 
+                                shadow-[0_0_30px_rgba(0,0,0,0.2)]
+                                hover:border-white/20 transition-all duration-300">
+                        <h3 class="text-2xl font-medium text-white/90 mb-4">
+                            Web Developer & Designer
+                        </h3>
+                        <p class="text-white/70 text-lg leading-relaxed mb-8">
+                            Hello! I'm Justin Ecoy, a passionate web developer with a keen eye for design and a love for creating seamless user experiences. I specialize in front-end development and enjoy bringing creative ideas to life.
+                        </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#projects" 
-                           class="px-6 py-3 bg-transparent border-2 border-white text-white rounded-full 
-                                  font-semibold hover:bg-white hover:text-gray-900 
-                                  transition-all duration-300 transform hover:scale-105">
-                            View Projects
-                        </a>
-                        <a href="#contact" 
-                           class="px-6 py-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-full 
-                                  font-semibold hover:from-red-600 hover:to-red-800 
-                                  transition-all duration-300 transform hover:scale-105">
-                            Contact Me
-                        </a>
+                        <div class="space-y-6 mb-8">
+                            <h4 class="text-white/90 text-lg font-medium tracking-wide">Technical Skills</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-900/30 transition-all duration-300">HTML</span>
+                                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-900/30 transition-all duration-300">CSS</span>
+                                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-900/30 transition-all duration-300">FIGMA</span>
+                                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-900/30 transition-all duration-300">BOOTSTRAP CSS</span>
+                                <span class="px-4 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-900/30 transition-all duration-300">TAILWIND CSS</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mb-8">
+                            <h4 class="text-white/90 text-lg font-medium tracking-wide">Interests & Hobbies</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-500/20 transition-all duration-300">Basketball</span>
+                                <span class="px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-500/20 transition-all duration-300">Cooking</span>
+                                <span class="px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-500/20 transition-all duration-300">Billiard</span>
+                                <span class="px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-500/20 transition-all duration-300">Watching movies</span>
+                                <span class="px-4 py-2 bg-blue-500/10 text-blue-300 rounded-lg text-sm 
+                                           border border-blue-500/20 hover:border-blue-500/40
+                                           hover:bg-blue-500/20 transition-all duration-300">Study</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" 
+                               class="px-6 py-3 bg-white/5 text-white/90 rounded-lg
+                                      border border-white/10 hover:bg-white/10 hover:border-white/20
+                                      transition-all duration-300">
+                                View Projects
+                            </a>
+                            <a href="#contact" 
+                               class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white rounded-lg
+                                      hover:from-blue-600 hover:to-blue-500
+                                      transition-all duration-300">
+                                Contact Me
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,18 +224,18 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl lg:text-5xl text-white font-bold mb-4 
-                       bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400">
+                       bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
                 My Projects
             </h2>
-            <div class="w-24 h-1 bg-red-500 mx-auto"></div>
+            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
 
             <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden 
-                        border border-gray-700 hover:border-red-500 
+                        border border-gray-700 hover:border-blue-500 
                         transform hover:scale-105 transition-all duration-300 
-                        shadow-xl hover:shadow-red-500/20">
+                        shadow-xl hover:shadow-blue-500/20">
                 <div class="relative overflow-hidden">
                     <img src="caps_landpage.jpg" alt="Capstone Project" 
                          class="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-500">
@@ -235,8 +243,8 @@
                 </div>
                 
                 <div class="p-6">
-                    <h3 class="text-red-500 text-2xl lg:text-3xl font-bold mb-3 
-                               group-hover:text-red-400 transition-colors duration-300">
+                    <h3 class="text-blue-500 text-2xl lg:text-3xl font-bold mb-3 
+                               group-hover:text-blue-400 transition-colors duration-300">
                         BCC Web Based E-voting With Facial Recognition
                     </h3>
                     
@@ -246,21 +254,21 @@
                     
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 HTML
                             </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 CSS
                             </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 Figma
                             </span>
@@ -270,9 +278,9 @@
             </div>
 
             <div class="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden 
-                        border border-gray-700 hover:border-red-500 
+                        border border-gray-700 hover:border-blue-500 
                         transform hover:scale-105 transition-all duration-300 
-                        shadow-xl hover:shadow-red-500/20">
+                        shadow-xl hover:shadow-blue-500/20">
                 <div class="relative overflow-hidden">
                     <img src="minicaps.jpg" alt="Mini Capstone" 
                          class="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-500">
@@ -280,8 +288,8 @@
                 </div>
                 
                 <div class="p-6">
-                    <h3 class="text-red-500 text-2xl lg:text-3xl font-bold mb-3 
-                               group-hover:text-red-400 transition-colors duration-300">
+                    <h3 class="text-blue-500 text-2xl lg:text-3xl font-bold mb-3 
+                               group-hover:text-blue-400 transition-colors duration-300">
                         Visitor Log System
                     </h3>
                     
@@ -291,21 +299,21 @@
                     
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 HTML
                             </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 CSS
                             </span>
-                            <span class="px-4 py-2 bg-gradient-to-r from-red-500/20 to-red-700/20 
-                                       text-red-400 rounded-full text-sm font-semibold 
-                                       border border-red-500/30 hover:border-red-500 
+                            <span class="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/20 
+                                       text-blue-400 rounded-full text-sm font-semibold 
+                                       border border-blue-500/30 hover:border-blue-500 
                                        transition-all duration-300">
                                 Figma
                             </span>
@@ -317,15 +325,15 @@
     </div>
 </section>
 
-<section id="contact" class="min-h-screen bg-gradient-to-r from-gray-900 via-black to-gray-900 py-20 px-4">
+<section id="contact" class="min-h-screen bg-gradient-to-r from-black via-blue-950/30 to-black py-20 px-4">
     <div class="container mx-auto max-w-6xl">
 
         <div class="text-center mb-16">
             <h2 class="text-4xl lg:text-5xl text-white font-bold mb-4 
-                       bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400">
+                       bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-300">
                 Connect With Me
             </h2>
-            <div class="w-24 h-1 bg-red-500 mx-auto mb-6"></div>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full mx-auto mb-6"></div>
             <p class="text-gray-400 text-lg max-w-2xl mx-auto">
                 Let's connect and collaborate! Feel free to reach out through any of these platforms.
             </p>
@@ -336,8 +344,8 @@
           
             <a href="https://www.facebook.com/justinnn02" target="_blank" 
                class="group flex flex-col items-center p-6 rounded-xl
-                      bg-gray-800/50 backdrop-blur-sm border border-gray-700
-                      hover:border-red-500 hover:bg-gray-800/80
+                      bg-blue-950/20 backdrop-blur-sm border border-blue-500/10
+                      hover:border-blue-400/30 hover:bg-blue-900/20
                       transform hover:scale-105 transition-all duration-300">
                 <div class="relative w-16 h-16 lg:w-20 lg:h-20 mb-4 
                             group-hover:animate-pulse transition-all duration-300">
@@ -351,8 +359,8 @@
 
             <a href="https://www.instagram.com/tinnnnn0i0/" target="_blank" 
                class="group flex flex-col items-center p-6 rounded-xl
-                      bg-gray-800/50 backdrop-blur-sm border border-gray-700
-                      hover:border-red-500 hover:bg-gray-800/80
+                      bg-blue-950/20 backdrop-blur-sm border border-blue-500/10
+                      hover:border-blue-400/30 hover:bg-blue-900/20
                       transform hover:scale-105 transition-all duration-300">
                 <div class="relative w-16 h-16 lg:w-20 lg:h-20 mb-4 
                             group-hover:animate-pulse transition-all duration-300">
@@ -366,8 +374,8 @@
 
             <a href="hhttps://github.com/codextin" target="_blank" 
                class="group flex flex-col items-center p-6 rounded-xl
-                      bg-gray-800/50 backdrop-blur-sm border border-gray-700
-                      hover:border-red-500 hover:bg-gray-800/80
+                      bg-blue-950/20 backdrop-blur-sm border border-blue-500/10
+                      hover:border-blue-400/30 hover:bg-blue-900/20
                       transform hover:scale-105 transition-all duration-300">
                 <div class="relative w-16 h-16 lg:w-20 lg:h-20 mb-4 
                             group-hover:animate-pulse transition-all duration-300">
@@ -381,8 +389,8 @@
 
             <a href="https://discord.com/channels/@me" target="_blank"
                class="group flex flex-col items-center p-6 rounded-xl
-                      bg-gray-800/50 backdrop-blur-sm border border-gray-700
-                      hover:border-red-500 hover:bg-gray-800/80
+                      bg-blue-950/20 backdrop-blur-sm border border-blue-500/10
+                      hover:border-blue-400/30 hover:bg-blue-900/20
                       transform hover:scale-105 transition-all duration-300">
                 <div class="relative w-16 h-16 lg:w-20 lg:h-20 mb-4 
                             group-hover:animate-pulse transition-all duration-300">
